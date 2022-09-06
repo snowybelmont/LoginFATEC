@@ -1,0 +1,494 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic); 
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(/fonts/glyphicons-halflings-regular.eot);
+    src: url(/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(/fonts/glyphicons-halflings-regular.woff) format('woff'),url(/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --background-login-page: #333333;
+    --background-login-box-body: #fff;
+    --background-login-box-body-two: #444;
+    --background-login-box-body-three: #666;
+    --color-login-box-msg: #666;
+    --border-color-form-control: #d2d6de;
+    --border-color-form-control-focus: #3c8dbc !important;
+    --form-control-placeholder: #bbb;
+    --background-form-control: #fff;
+    --btnhover: #367fa9;
+    --color-btn: #3c8dbc;
+    --color-border-btn: #367fa9;
+    --color-text-btn: #fff;
+    --color-text-btn-hover: #fff;
+    --color-texto: #3c8dbc;
+    --color-texto-hover: #5aabda;
+    --border-top-color-box-footer: 
+    1px solid #f4f4f4;
+    --color-btn-facebook: 
+    #fff;
+    --background-color-btn-facebook: #3b5998;
+    --border-color-btn-facebook: rgba(0,0,0,0.2);
+    --color-btn-facebook-hover: 
+    #fff;
+    --background-color-btn-facebook-hover: #2d4373;
+    --border-color-btn-facebook-hover: rgba(0,0,0,0.2);
+    --background-color-selection: rgb(0, 128, 255);
+    --color-selection: white;
+    --color-form-control-feedback: #777;
+    --background-color-label: #333333;
+    --background-color-label-ball: #3c8dbc;
+    --color-fa-moon: #3c8dbc;
+    --color-fa-sun: #367fa9;
+    --background-color-btn-block-active: #367fa9;
+    --color-btn-submit-border-hover: 1px solid #000;
+    --color-border-input: 1px solid #ccc;
+    --color-input-text: #555;
+
+}
+
+html[data-theme="dark"] {
+    --background-login-page: #121521;
+    --background-login-box-body: #22283a;
+    --background-login-box-body-two: #22283a;
+    --background-login-box-body-three: #22283a;
+    --color-login-box-msg: #c1c3ca ;
+    --border-color-form-control: 
+    #28314c;
+    --border-color-form-control-focus: #c1c3ca !important;
+    --form-control-placeholder: #4b5371;
+    --background-form-control: #22283a;
+    --btnhover: #e8ff4b;
+    --color-btn: #b1c149;
+    --color-border-btn: #b1c149;
+    --color-text-btn: #3c3c3c;
+    --color-text-btn-hover: #1c1c1c;
+    --color-texto: #b1c149;
+    --color-texto-hover: #e8ff4b;
+    --border-top-color-box-footer: 
+    1px solid rgb(40, 46, 77);
+    --color-btn-facebook: 
+    #3c3c3c;
+    --background-color-btn-facebook: #b1c149;
+    --border-color-btn-facebook: rgba(0,0,0,0.2);
+    --color-btn-facebook-hover: 
+    #1c1c1c;
+    --background-color-btn-facebook-hover: #e8ff4b;
+    --border-color-btn-facebook-hover: rgba(0,0,0,0.2);
+    --background-color-selection: #b1c149;
+    --color-selection: #1c1c1c;
+    --color-form-control-feedback: #c1c3ca ;
+    --background-color-label: #121521;
+    --background-color-label-ball: #b1c149;
+    --color-fa-moon: #b1c149;
+    --color-fa-sun: #e8ff4b;
+    --background-color-btn-block-active: #e8ff4b;
+    --color-btn-submit-border-hover: 1px solid #000000;
+    --color-border-input: 1px solid #4b5371;
+    --color-input-text: #c1c3ca;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+::selection {
+    background-color: var(--background-color-selection);
+    color: var(--color-selection);
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 50px;
+}
+
+.login-page {
+    background: var(--background-login-page);
+}
+
+.login-box {
+    width: 360px;
+    margin: 7% auto;
+}
+
+.login-box-body {
+    background: var(--background-login-box-body);
+    padding: 20px;
+    color: var(--background-login-box-body-two);
+    border-top: 0;
+    color: var(--background-login-box-body-three);
+    border-radius: 10px;
+}
+
+    .login-box-body .form-control-feedback {
+        color: var(--color-form-control-feedback);
+    }
+
+.checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#chk {
+    opacity: 0;
+    position: absolute;
+}
+    
+.label {
+    background-color: var(--background-color-label);
+    border-radius: 26px;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width:50px;
+    
+    font-size: 75%;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 0;
+    
+    transform: scale(1);
+}
+
+.checkbox label {
+    font-weight: 400;
+}
+
+.fa-moon-o {
+    color: var(--color-fa-moon);
+    padding: 3.5px;
+}
+    
+.fa-sun-o {
+    color: var(--color-fa-sun);
+    padding: 3.5px;
+    padding-left: 7px;
+}
+    
+.label .ball {
+    background-color: var(--background-color-label-ball);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    
+    height: 22px;
+    width: 22px;
+    
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+    
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+#logofateccenter {
+    text-align: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h4 {
+    font-family: 'Source Sans Pro',sans-serif;
+    line-height: 1.1;
+}
+
+.login-box-msg {
+    color: var(--color-login-box-msg);
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.has-feedback {
+    position: relative;
+}
+
+input[type="email" i] {
+    color: var(--color-input-text);
+}
+
+input[type="password" i] {
+    color: var(--color-input-text);
+}
+
+.form-control {
+    border-radius: 0 !important;
+    box-shadow: none;
+    border-color: var(--border-color-form-control);
+    background-color: var(--background-form-control);
+    width: 100%;
+    padding: 6px 12px;
+    border: var(--color-border-input);
+}
+
+    .form-control::-moz-placeholder {
+        color: var(--form-control-placeholder);
+        opacity: 1;
+    }
+
+    .form-control:-ms-input-placeholder {
+        color: var(--form-control-placeholder);
+    }
+
+    .form-control::-webkit-input-placeholder {
+        color: var(--form-control-placeholder);
+    }
+
+    .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+        background-color: #eee;
+        opacity: 1;
+    }
+
+    .form-control[disabled], fieldset[disabled] .form-control {
+        cursor: not-allowed;
+    }
+
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.form-control:focus { 
+    border-color: var(--border-color-form-control-focus);
+    box-shadow: none;
+    outline: 0px; 
+}
+
+.glyphicon {
+    font-family: "Glyphicons Halflings";
+}
+
+.glyphicon-envelope:before {
+    content: "\2709";
+}
+
+.glyphicon-lock:before {
+    content: "\e033";
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.space-26 {
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+    margin: 12px 0;
+    margin: 26px 0 25px;
+}
+
+[class*=vspace-26] {
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+    margin: 12px 0;
+    margin: 26px 0 25px 0;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+button, input {
+    line-height: inherit;
+    font: inherit;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+    .btn.btn-flat {
+        -radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-width: 1px;
+    }
+
+.btn:hover {
+    border: var(--color-btn-submit-border-hover);
+}
+
+.btn-primary {
+    background-color: var(--color-btn);
+    border-color: var(--color-border-btn);
+    color: var(--color-text-btn);
+        }
+    
+    .btn-primary:hover, .btn-primary:active, .btn-primary.hover {
+        background-color: var(--btnhover);
+        color: var(--color-text-btn-hover);
+    }
+
+.btn-block {
+    width: 100%;
+}
+    .btn-block:active {
+        background-color: var(--background-color-btn-block-active);
+    }
+
+.form-group:after, .form-group:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.form-group:after, .row:after {
+    clear: both;
+}
+
+.col-xs-6 {
+    min-height: 1px;
+    width: 50%;
+}
+
+.col-xs-12, .col-xs-6 {
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+
+.icheck > label {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#textoes {
+    color: var(--color-texto);
+}
+        
+#textopa {
+    color: var(--color-texto);
+    text-align: right;
+}
+        
+#textoes:hover {
+    color: var(--color-texto-hover);
+}
+        
+#textopa:hover {
+    color: var(--color-texto-hover);
+}
+
+.space-10 {
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+    margin: 12px 0;
+    margin: 10px 0 9px;
+}
+
+[class*=vspace-10] {
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+    margin: 12px 0;
+    margin: 10px 0 9px 0;
+}
+
+#line {
+    text-align: center !important;
+}
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: var(--border-top-color-box-footer);
+    padding: 10px;
+}
+
+.box-body:after, .box-footer:after {
+    clear: both;
+}
+
+.box-body:before, .box-footer:before, .box-body:after, .box-footer:after {
+    content: " ";
+    display: table;
+}
+
+.social-auth-links {
+    margin: 10px 0;
+}
+
+.btn-social {
+    position: relative;
+    padding-left: 44px !important;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .btn-social :first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px !important;
+        line-height: 34px !important;
+        font-size: 1.6em !important;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }
+
+.btn-facebook {
+    color: var(--color-btn-facebook);
+    background-color: var(--background-color-btn-facebook);
+    border-color: var(--border-color-btn-facebook);
+}
+
+    .btn-facebook:hover, .btn-facebook:focus, .btn-facebook.focus, .btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+        color: var(--color-btn-facebook-hover);
+        background-color: var(--background-color-btn-facebook-hover);
+        border-color: var(--border-color-btn-facebook-hover);
+    }

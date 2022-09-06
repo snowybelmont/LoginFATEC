@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        FATEC On-Line
+    </title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/style.css"/>
+
+</head>
+<body class="login-page">
+
+    <div class="login-box">
+        <div class="login-box-body">
+
+            <div>
+                <input type="checkbox"  class="checkbox" id="chk"/>
+        
+                <label class="label" for="chk">
+                    <i class="fa fa-moon-o"></i>
+                    <i class="fa fa-sun-o"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+
+            <p id="logofateccenter">
+                <img id="logofatec" src="/img/logo_fatec_online.png" />
+            </p>
+
+            <h4 class="login-box-msg">
+                Entrar
+            </h4>
+                        
+            <div id="caixa2" class="form-group has-feedback">
+                <input id="caixa" name="txtEmail" type="email" class="form-control" placeholder="E-mail" />
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input id="caixa" name="txtSenha" type="password" class="form-control" placeholder="Senha" />
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+                        
+            <br/>
+
+            <div class="row">
+                <div class="space-26"></div>
+                       
+                <div class="col-xs-12">
+                <input type="submit" name="btnLogar" value=" Entrar " id="btnLogar" class="btn btn-primary btn-block btn-flat" />
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="checkbox icheck">
+                        <label>
+                            <a id="textoes" href='#'>
+                                Esqueceu senha?
+                            </a>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="textopa" class="col-xs-6">
+                    <div class="checkbox icheck">
+                        <label>
+                            <a id="textopa" href='#'>
+                                Primeiro acesso?
+                            </a>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <br />
+                </div>
+
+            </div>
+                
+            <div class="space-10"></div>
+            
+            <div id="line" class="row">
+                <div class="col-xs-12"></div>
+            </div>
+
+            <div class="box-footer">
+                <div class="social-auth-links text-center">
+                    <a href="https://www.facebook.com/fatecguaratinguetaof" target="_blank" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i>
+                        Fatec Guaratinguetá Oficial
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+    <script>
+        const changeThemeToDark = () => {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("data-theme", "dark");
+        }
+    
+        const changeThemeToLight = () => {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("data-theme", 'light');
+        }
+        let theme = localStorage.getItem('data-theme');
+        if (theme == 'dark') changeThemeToDark();
+      </script>
+
+</body>
+</html>
